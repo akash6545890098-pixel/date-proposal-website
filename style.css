@@ -1,0 +1,88 @@
+/* style.css */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#ffd6e7,#ffeef5);
+  font-family:'Poppins',sans-serif;
+  overflow:hidden;
+}
+
+.container{
+  position:relative;
+}
+
+.card{
+  width:350px;
+  background:white;
+  padding:40px 30px;
+  border-radius:25px;
+  text-align:center;
+  box-shadow:0 10px 40px rgba(255,105,180,0.3);
+  animation:pop 0.5s ease;
+}
+
+@keyframes pop{
+  from{
+    transform:scale(0.8);
+    opacity:0;
+  }
+  to{
+    transform:scale(1);
+    opacity:1;
+  }
+}
+
+.heart{
+  width:80px;
+  margin-bottom:15px;
+}
+
+h1{
+  color:#ff3d7f;
+  margin-bottom:10px;
+  font-size:28px;
+}
+
+p{
+  color:#777;
+  margin-bottom:25px;
+}
+
+.buttons{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+}
+
+button{
+  border:none;
+  padding:12px 28px;
+  border-radius:30px;
+  font-size:16px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+#yesBtn{
+  background:#ff4f8b;
+  color:white;
+}
+
+#yesBtn:hover{
+  transform:scale(1.08);
+}
+
+#noBtn{
+  background:#eee;
+  color:#444;
+  position:relative;
+}
