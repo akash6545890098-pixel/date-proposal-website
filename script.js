@@ -1,53 +1,73 @@
+/* PAGE SWITCH */
+
 function showPage(pageNumber){
 
-  document.querySelectorAll('.page').forEach((page)=>{
+  document
+  .querySelectorAll('.page')
+  .forEach((page)=>{
 
     page.classList.remove('active');
 
   });
 
   document
-    .getElementById(`page${pageNumber}`)
-    .classList.add('active');
+  .getElementById(
+    `page${pageNumber}`
+  )
+  .classList.add('active');
 
 }
 
 /* MOVING NO BUTTON */
 
 const noBtn =
-document.getElementById('noBtn');
+document.getElementById(
+  'noBtn'
+);
 
-noBtn.addEventListener('mouseover',()=>{
+noBtn.addEventListener(
+  'mouseover',
+  ()=>{
 
-  const x =
-  Math.random() * 300 - 150;
+    const x =
+    Math.random() * 300 - 150;
 
-  const y =
-  Math.random() * 300 - 150;
+    const y =
+    Math.random() * 300 - 150;
 
-  noBtn.style.transform =
-  `translate(${x}px, ${y}px)`;
+    noBtn.style.transform =
+    `translate(${x}px, ${y}px)`;
 
-});
+  }
+);
 
 /* DATE TYPE SELECT */
 
 const foods =
-document.querySelectorAll('.food');
+document.querySelectorAll(
+  '.food'
+);
 
 foods.forEach((food)=>{
 
-  food.addEventListener('click',()=>{
+  food.addEventListener(
+    'click',
+    ()=>{
 
-    foods.forEach((f)=>{
+      foods.forEach((f)=>{
 
-      f.classList.remove('active-food');
+        f.classList.remove(
+          'active-food'
+        );
 
-    });
+      });
 
-    food.classList.add('active-food');
+      food.classList.add(
+        'active-food'
+      );
 
-  });
+    }
+  );
 
 });
 
@@ -83,13 +103,17 @@ function sendWhatsApp(){
   const message =
 `💖 NEW DATE REQUEST 💖
 
-✨ Date Type: ${selectedDateType}
+✨ Date Type:
+${selectedDateType}
 
-📅 Date: ${date}
+📅 Date:
+${date}
 
-⏰ Time: ${time}
+⏰ Time:
+${time}
 
-📍 Location: ${location}`;
+📍 Location:
+${location}`;
 
   const whatsappURL =
 `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
