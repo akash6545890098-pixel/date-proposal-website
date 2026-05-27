@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
   <title>Date Proposal</title>
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
+
 </head>
+
 <body>
 
 <!-- PAGE 1 -->
+
 <section class="page active" id="page1">
 
   <div class="card">
@@ -20,11 +29,17 @@
 
     <div class="buttons">
 
-      <button class="yes" onclick="showPage(2)">
+      <button
+        class="yes"
+        onclick="showPage(2)"
+      >
         Yes
       </button>
 
-      <button class="no" id="noBtn">
+      <button
+        class="no"
+        id="noBtn"
+      >
         No
       </button>
 
@@ -35,6 +50,7 @@
 </section>
 
 <!-- PAGE 2 -->
+
 <section class="page" id="page2">
 
   <div class="card">
@@ -43,9 +59,14 @@
 
     <h1>no way, NO WAY 😳</h1>
 
-    <p>I kinda would've preferred if you said no</p>
+    <p>
+      I kinda would've preferred if you said no
+    </p>
 
-    <button class="continue" onclick="showPage(3)">
+    <button
+      class="continue"
+      onclick="showPage(3)"
+    >
       Continue
     </button>
 
@@ -54,6 +75,7 @@
 </section>
 
 <!-- PAGE 3 -->
+
 <section class="page" id="page3">
 
   <div class="card form-card">
@@ -63,12 +85,21 @@
     <form>
 
       <label>Date</label>
-      <input type="date" id="dateInput">
+
+      <input
+        type="date"
+        id="dateInput"
+      />
 
       <label>Time</label>
-      <input type="time" id="timeInput">
+
+      <input
+        type="time"
+        id="timeInput"
+      />
 
       <label>Location</label>
+
       <textarea
         rows="4"
         placeholder="Write location..."
@@ -90,37 +121,53 @@
 </section>
 
 <!-- PAGE 4 -->
+
 <section class="page" id="page4">
 
   <div class="card food-card">
 
-    <h1>What are we feeling? ✨</h1>
+    <h1>Choose Date Type ✨</h1>
 
     <div class="foods">
 
       <div class="food active-food">
-        🍕
-        <span>Pizza</span>
+
+        🛏️
+
+        <span>ROOM DATE</span>
+
       </div>
 
       <div class="food">
-        🍣
-        <span>Sushi</span>
+
+        🛵
+
+        <span>RIDE DATE ON YOUR SCOOTY</span>
+
       </div>
 
       <div class="food">
-        🍔
-        <span>Burger</span>
+
+        🌃
+
+        <span>NIGHT ROOM DATE</span>
+
       </div>
 
       <div class="food">
-        🍜
-        <span>Ramen</span>
+
+        🌳
+
+        <span>PARK DATE</span>
+
       </div>
 
     </div>
 
-    <button class="continue" onclick="sendWhatsApp()">
+    <button
+      class="continue"
+      onclick="sendWhatsApp()"
+    >
       Let's Goo 💖
     </button>
 
