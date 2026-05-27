@@ -14,21 +14,26 @@ function showPage(pageNumber){
 
 /* MOVING NO BUTTON */
 
-const noBtn = document.getElementById('noBtn');
+const noBtn =
+document.getElementById('noBtn');
 
 noBtn.addEventListener('mouseover',()=>{
 
-  const x = Math.random() * 300 - 150;
-  const y = Math.random() * 300 - 150;
+  const x =
+  Math.random() * 300 - 150;
+
+  const y =
+  Math.random() * 300 - 150;
 
   noBtn.style.transform =
   `translate(${x}px, ${y}px)`;
 
 });
 
-/* FOOD SELECT */
+/* DATE TYPE SELECT */
 
-const foods = document.querySelectorAll('.food');
+const foods =
+document.querySelectorAll('.food');
 
 foods.forEach((food)=>{
 
@@ -46,7 +51,7 @@ foods.forEach((food)=>{
 
 });
 
-/* WHATSAPP SEND */
+/* SEND WHATSAPP */
 
 function sendWhatsApp(){
 
@@ -59,12 +64,12 @@ function sendWhatsApp(){
   const location =
   document.getElementById('locationInput').value;
 
-  const selectedFood =
+  const selectedDateType =
   document.querySelector('.active-food span')
   .innerText;
 
   const message =
-`💖 New Date Request 💖
+`💖 NEW DATE REQUEST 💖
 
 📅 Date: ${date}
 
@@ -72,13 +77,17 @@ function sendWhatsApp(){
 
 📍 Location: ${location}
 
-🍴 Food: ${selectedFood}`;
+✨ Date Type: ${selectedDateType}`;
 
-  const phoneNumber = "919064560840";
+  const phoneNumber =
+  "919064560840";
 
   const whatsappURL =
 `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
-  window.open(whatsappURL,'_blank');
+  window.open(
+    whatsappURL,
+    '_blank'
+  );
 
 }
