@@ -1,45 +1,77 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Date Proposal 💖</title>
-
-  <link rel="stylesheet" href="style.css"/>
-
-  <!-- Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-  <!-- Confetti -->
-  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Date Proposal</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-  <div class="container">
-
+  <!-- Page 1 -->
+  <section class="page active" id="page1">
     <div class="card">
-
-      <img src="https://cdn-icons-png.flaticon.com/512/833/833472.png" class="heart"/>
-
-      <h1>Will You Go On a Date With Me? 💕</h1>
-
-      <p>You are officially invited for a cute date 🌸</p>
+      <div class="emoji">💌</div>
+      <h1>Will you go on a date with me?</h1>
 
       <div class="buttons">
+        <button class="yes" onclick="showPage(2)">Yes</button>
+        <button class="no" id="noBtn">No</button>
+      </div>
+    </div>
+  </section>
 
-        <button id="yesBtn">Yes 💖</button>
+  <!-- Page 2 -->
+  <section class="page" id="page2">
+    <div class="card">
+      <div class="emoji">🎉</div>
+      <h1>no way, NO WAY. 😳</h1>
+      <p>I kinda would've preferred if you said no</p>
 
-        <button id="noBtn">No 😢</button>
+      <button class="continue" onclick="showPage(3)">
+        Continue
+      </button>
+    </div>
+  </section>
 
+  <!-- Page 3 -->
+  <section class="page" id="page3">
+    <div class="card form-card">
+      <h1>So... when are you free?</h1>
+
+      <form>
+        <label>Date</label>
+        <input type="date" />
+
+        <label>Time</label>
+        <input type="time" />
+
+        <label>Address</label>
+        <textarea rows="4" placeholder="Write location..."></textarea>
+
+        <button type="button" class="continue" onclick="showPage(4)">
+          Baby yay →
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Page 4 -->
+  <section class="page" id="page4">
+    <div class="card food-card">
+      <h1>What are we feeling? ✨</h1>
+
+      <div class="foods">
+        <div class="food active-food">🍕<span>Pizza</span></div>
+        <div class="food">🍣<span>Sushi</span></div>
+        <div class="food">🍔<span>Burger</span></div>
+        <div class="food">🍜<span>Ramen</span></div>
       </div>
 
+      <button class="continue">Let's Goo 💖</button>
     </div>
+  </section>
 
-  </div>
-
-  <script src="script.js"></script>
-
+<script src="script.js"></script>
 </body>
 </html>
