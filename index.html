@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
   <meta charset="UTF-8">
 
   <meta
     name="viewport"
-    content="width=device-width, initial-scale=1.0"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
   >
 
   <title>Date Proposal</title>
@@ -19,13 +20,20 @@
 
 <!-- PAGE 1 -->
 
-<section class="page active" id="page1">
+<section
+  class="page active"
+  id="page1"
+>
 
   <div class="card">
 
-    <div class="emoji">💌</div>
+    <div class="emoji">
+      💌
+    </div>
 
-    <h1>Will you go on a date with me?</h1>
+    <h1>
+      Will you go on a date with me?
+    </h1>
 
     <div class="buttons">
 
@@ -51,16 +59,24 @@
 
 <!-- PAGE 2 -->
 
-<section class="page" id="page2">
+<section
+  class="page"
+  id="page2"
+>
 
   <div class="card">
 
-    <div class="emoji">🎉</div>
+    <div class="emoji">
+      🎉
+    </div>
 
-    <h1>no way, NO WAY 😳</h1>
+    <h1>
+      no way, NO WAY 😳
+    </h1>
 
     <p>
-      I kinda would've preferred if you said no
+      I kinda would've preferred
+      if you said no
     </p>
 
     <button
@@ -76,43 +92,64 @@
 
 <!-- PAGE 3 -->
 
-<section class="page" id="page3">
+<section
+  class="page"
+  id="page3"
+>
 
   <div class="card">
 
-    <h1>Choose Date Type ✨</h1>
+    <h1>
+      Choose Date Type ✨
+    </h1>
 
     <div class="foods">
+
+      <!-- ROOM DATE -->
 
       <div class="food active-food">
 
         🛏️
 
-        <span>ROOM DATE</span>
+        <span>
+          ROOM DATE
+        </span>
 
       </div>
+
+      <!-- SCOOTY DATE -->
 
       <div class="food">
 
         🛵
 
-        <span>RIDE DATE ON YOUR SCOOTY</span>
+        <span>
+          RIDE DATE ON YOUR SCOOTY
+        </span>
 
       </div>
+
+      <!-- FOOD DATE -->
 
       <div class="food">
 
-        🌃
+        🍽️
 
-        <span>NIGHT ROOM DATE</span>
+        <span>
+          FOOD DATE
+        </span>
 
       </div>
+
+      <!-- PARK DATE -->
 
       <div class="food">
 
         🌳
 
-        <span>PARK DATE</span>
+        <span>
+          PARK DATE
+        </span>
 
       </div>
 
@@ -131,15 +168,22 @@
 
 <!-- PAGE 4 -->
 
-<section class="page" id="page4">
+<section
+  class="page"
+  id="page4"
+>
 
   <div class="card form-card">
 
-    <h1>Enter WhatsApp Number 📱</h1>
+    <h1>
+      Enter WhatsApp Number 📱
+    </h1>
 
     <form>
 
-      <label>WhatsApp Number</label>
+      <label>
+        WhatsApp Number
+      </label>
 
       <input
         type="tel"
@@ -147,26 +191,32 @@
         placeholder="Enter WhatsApp Number"
       >
 
-      <label>Date</label>
+      <label>
+        Date
+      </label>
 
       <input
         type="date"
         id="dateInput"
       >
 
-      <label>Time</label>
+      <label>
+        Time
+      </label>
 
       <input
         type="time"
         id="timeInput"
       >
 
-      <label>Location</label>
+      <label>
+        Location
+      </label>
 
       <textarea
         rows="4"
-        placeholder="Write location..."
         id="locationInput"
+        placeholder="Write location..."
       ></textarea>
 
       <button
@@ -184,6 +234,30 @@
 </section>
 
 <script src="script.js"></script>
+
+<!-- REMOVE VERCEL TOOLBAR -->
+
+<script>
+
+window.addEventListener(
+  "load",
+  () => {
+
+    const vercelToolbar =
+    document.querySelector(
+      '[data-vercel-toolbar]'
+    );
+
+    if(vercelToolbar){
+
+      vercelToolbar.remove();
+
+    }
+
+  }
+);
+
+</script>
 
 </body>
 </html>
