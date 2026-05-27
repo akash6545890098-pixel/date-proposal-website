@@ -132,7 +132,7 @@ textarea{
   border:2px solid #ffd4e6;
   border-radius:22px;
   padding:20px;
-  font-size:40px;
+  font-size:35px;
   cursor:pointer;
   transition:.3s;
 }
@@ -140,8 +140,9 @@ textarea{
 .food span{
   display:block;
   margin-top:10px;
-  font-size:16px;
+  font-size:14px;
   color:#444;
+  font-weight:600;
 }
 
 .food:hover,
