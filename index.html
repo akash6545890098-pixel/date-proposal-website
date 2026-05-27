@@ -2,16 +2,16 @@
 <html lang="en">
 <head>
 
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
 
   <meta
     name="viewport"
     content="width=device-width, initial-scale=1.0"
-  />
+  >
 
   <title>Date Proposal</title>
 
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -78,7 +78,7 @@
 
 <section class="page" id="page3">
 
-  <div class="card food-card">
+  <div class="card">
 
     <h1>Choose Date Type ✨</h1>
 
@@ -102,9 +102,9 @@
 
       <div class="food">
 
-        🍗
+        🌃
 
-        <span>FOOD DATE</span>
+        <span>NIGHT ROOM DATE</span>
 
       </div>
 
@@ -135,23 +135,31 @@
 
   <div class="card form-card">
 
-    <h1>So... when are you free?</h1>
+    <h1>Enter WhatsApp Number 📱</h1>
 
     <form>
+
+      <label>WhatsApp Number</label>
+
+      <input
+        type="tel"
+        id="whatsappNumber"
+        placeholder="Enter WhatsApp Number"
+      >
 
       <label>Date</label>
 
       <input
         type="date"
         id="dateInput"
-      />
+      >
 
       <label>Time</label>
 
       <input
         type="time"
         id="timeInput"
-      />
+      >
 
       <label>Location</label>
 
@@ -166,7 +174,7 @@
         class="continue"
         onclick="sendWhatsApp()"
       >
-        Let's Goo 💖
+        Send Request 💖
       </button>
 
     </form>
