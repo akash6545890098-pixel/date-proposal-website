@@ -21,5 +21,37 @@ foods.forEach((food) => {
   food.addEventListener('click', () => {
     foods.forEach((f) => f.classList.remove('active-food'));
     food.classList.add('active-food');
+    function sendWhatsApp() {
+
+  const selectedFood =
+    document.querySelector('.active-food span').innerText;
+
+  const date =
+    document.querySelector('input[type=\"date\"]').value;
+
+  const time =
+    document.querySelector('input[type=\"time\"]').value;
+
+  const address =
+    document.querySelector('textarea').value;
+
+  const message =
+`💖 Date Confirmed 💖
+
+🍴 Food: ${selectedFood}
+
+📅 Date: ${date}
+
+⏰ Time: ${time}
+
+📍 Address: ${address}`;
+
+  const phoneNumber = "919064560840";
+
+  const whatsappURL =
+`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+  window.open(whatsappURL, '_blank');
+    }
   });
 });
