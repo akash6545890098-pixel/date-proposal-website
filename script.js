@@ -1,32 +1,25 @@
-// script.js
-
-const noBtn = document.getElementById("noBtn");
-const yesBtn = document.getElementById("yesBtn");
-
-noBtn.addEventListener("mouseover", () => {
-
-  const x = Math.floor(Math.random() * 300) - 150;
-  const y = Math.floor(Math.random() * 300) - 150;
-
-  noBtn.style.transform = `translate(${x}px, ${y}px)`;
-
-});
-
-yesBtn.addEventListener("click", () => {
-
-  confetti({
-    particleCount: 200,
-    spread: 100,
-    origin: { y: 0.6 }
+function showPage(pageNumber) {
+  document.querySelectorAll('.page').forEach((page) => {
+    page.classList.remove('active');
   });
 
-  document.querySelector(".card").innerHTML = `
-    <img src="https://cdn-icons-png.flaticon.com/512/742/742751.png"
-    style="width:100px;margin-bottom:20px;">
+  document.getElementById(`page${pageNumber}`).classList.add('active');
+}
 
-    <h1>Yayyyy 💖</h1>
+const noBtn = document.getElementById('noBtn');
 
-    <p>See you on our date 🌸✨</p>
-  `;
+noBtn.addEventListener('mouseover', () => {
+  const x = Math.random() * 300 - 150;
+  const y = Math.random() * 300 - 150;
 
+  noBtn.style.transform = `translate(${x}px, ${y}px)`;
+});
+
+const foods = document.querySelectorAll('.food');
+
+foods.forEach((food) => {
+  food.addEventListener('click', () => {
+    foods.forEach((f) => f.classList.remove('active-food'));
+    food.classList.add('active-food');
+  });
 });
