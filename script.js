@@ -55,18 +55,30 @@ foods.forEach((food)=>{
 
 function sendWhatsApp(){
 
+  const phoneNumber =
+  document.getElementById(
+    'whatsappNumber'
+  ).value;
+
   const date =
-  document.getElementById('dateInput').value;
+  document.getElementById(
+    'dateInput'
+  ).value;
 
   const time =
-  document.getElementById('timeInput').value;
+  document.getElementById(
+    'timeInput'
+  ).value;
 
   const location =
-  document.getElementById('locationInput').value;
+  document.getElementById(
+    'locationInput'
+  ).value;
 
   const selectedDateType =
-  document.querySelector('.active-food span')
-  .innerText;
+  document.querySelector(
+    '.active-food span'
+  ).innerText;
 
   const message =
 `💖 NEW DATE REQUEST 💖
@@ -78,9 +90,6 @@ function sendWhatsApp(){
 ⏰ Time: ${time}
 
 📍 Location: ${location}`;
-
-  const phoneNumber =
-  "919064560840";
 
   const whatsappURL =
 `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
