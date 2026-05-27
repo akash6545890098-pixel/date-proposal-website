@@ -71,13 +71,13 @@ function sendWhatsApp(){
   const message =
 `💖 NEW DATE REQUEST 💖
 
+✨ Date Type: ${selectedDateType}
+
 📅 Date: ${date}
 
 ⏰ Time: ${time}
 
-📍 Location: ${location}
-
-✨ Date Type: ${selectedDateType}`;
+📍 Location: ${location}`;
 
   const phoneNumber =
   "919064560840";
